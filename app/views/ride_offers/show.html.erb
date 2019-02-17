@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @ride_offer.username %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @ride_offer.origin %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @ride_offer.destination %>
+</p>
+
+<p>
+  <strong>Ride Date:</strong>
+  <%= @ride_offer.rideDate %>
+</p>
+
+<p>
+  <strong>Ride Time:</strong>
+  <%= @ride_offer.rideTime %>
+</p>
+
+<p>
+  <strong>Money Requested:</strong>
+  <%= @ride_offer.moneyRequested %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @ride_offer.comments %>
+</p>
+
+<%= link_to 'Edit', edit_ride_offer_path(@ride_offer) %> |
+<%= link_to 'Back', ride_offers_path %>

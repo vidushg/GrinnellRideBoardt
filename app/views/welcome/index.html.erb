@@ -1,0 +1,39 @@
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideShare</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_link_tag    'components' %>
+  </head>
+  <body>
+    
+    <!-- Begin page content -->
+  <section class="jumbotron text-center" style="margin-top: 1em;">
+      <div class="container">
+        <h1 class="jumbotron-heading">Making Travel Easier</h1>
+        <p class="lead text-muted">Grinnellians need rides. Some of us have cars. Some of us don't. We can help.</p>
+        <p>
+          <a href="/ride_requests/new" class="btn btn-primary">Request a Ride</a>
+          <a href="/ride_offers/new" class="btn btn-secondary">Give a Ride</a>
+        </p>
+      </div>
+    </section>
+    <!-- End page content -->
+    
+    <!--<footer class="footer darkFooter">
+      <div class="container">
+        <span class="text-muted footerText" style="text-align: center"><%= Time.new.year %> Copyright &copy; Grinnell College. All rights reserved.</span>
+      </div>
+    </footer>-->
+
+    </body>

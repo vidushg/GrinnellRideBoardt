@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="reqDiv">
+<center><h1>Ride Requests</h1></center>
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Grinnell Username</th>
+      <th scope="col">Origin</th>
+      <th scope="col">Destination</th>
+      <th scope="col">Ride Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ride_requests.each do |ride_request| %>
+      <tr>
+        <td><%= ride_request.username %></td>
+        <td><%= ride_request.origin %></td>
+        <td><%= ride_request.destination %></td>
+        <td><%= ride_request.rideDate %></td>
+        <!--<td><=%= link_to 'Show', ride_request %></td>-->
+        <!--<td><=%= link_to 'Edit', edit_ride_request_path(ride_request) %></td>-->
+        <td><%= link_to 'Destroy', ride_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<center><a href="/ride_requests/new"><button type="button" class="btn btn-primary btn-lg">New Request</button></a></center>
+
+</div>
+

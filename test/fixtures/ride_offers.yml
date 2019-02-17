@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  origin: MyString
+  destination: MyString
+  rideDate: 2019-02-16
+  rideTime: 2019-02-16 20:29:15
+  moneyRequested: MyString
+  comments: MyText
+
+two:
+  username: MyString
+  origin: MyString
+  destination: MyString
+  rideDate: 2019-02-16
+  rideTime: 2019-02-16 20:29:15
+  moneyRequested: MyString
+  comments: MyText
