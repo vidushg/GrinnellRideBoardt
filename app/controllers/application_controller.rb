@@ -5,9 +5,7 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
 
   def send_emails
-    # Things to do: 
-    #   1. Match ke results lao
-    #   2. Saare requesters ko offers 
+    
     results = match();
     
        
