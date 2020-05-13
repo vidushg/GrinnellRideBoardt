@@ -1,9 +1,13 @@
 source 'https://rubygems.org'
 
+gem 'rails-controller-testing'
+
+gem 'minitest', '5.10.3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -15,6 +19,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'rest-client'
 gem 'mailgun-ruby'
+
+gem 'sqlite3', '~> 1.3.6' 
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

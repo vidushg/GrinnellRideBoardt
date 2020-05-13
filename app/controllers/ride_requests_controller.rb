@@ -35,12 +35,12 @@ class RideRequestsController < ApplicationController
         format.json { render json: @ride_request.errors, status: :unprocessable_entity }
       end
     end
-    
-    # send_emails
+
+    send_emails
   end
-  
-  
-  
+
+
+
 
   # PATCH/PUT /ride_requests/1
   # PATCH/PUT /ride_requests/1.json
@@ -55,7 +55,7 @@ class RideRequestsController < ApplicationController
       end
     end
   end
-  
+
 
 
   # DELETE /ride_requests/1
@@ -78,8 +78,8 @@ class RideRequestsController < ApplicationController
     def ride_request_params
       params.require(:ride_request).permit(:username, :origin, :destination, :rideDate, :rideTime, :moneyOffered, :comments)
     end
-    
-    
 
-    
+
+
+
 end

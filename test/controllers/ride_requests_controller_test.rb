@@ -16,6 +16,19 @@ class RideRequestsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should not send empty email" do
+    rideoffer_match = RideOffer.create(username:"user",origin:"origin",destination:"destination",rideTime:Time.current,rideDate:Date.current)
+    riderequest_match = RideRequest.create(username:"user1",origin:"origin1",destination:"destination",rideTime:Time.current,rideDate:Date.current)
+    assert_not :send_emails
+    rideoffer_match.destroy
+    riderequest_match.destroy
+  end
+
+  test "should not create empty ride_request" do
+    ride_request = RideRequest.create
+    assert_not ride_request.save
+  end
+
   test "should create ride_request" do
     assert_difference('RideRequest.count') do
       post :create, ride_request: { comments: @ride_request.comments, destination: @ride_request.destination, moneyOffered: @ride_request.moneyOffered, origin: @ride_request.origin, rideDate: @ride_request.rideDate, rideTime: @ride_request.rideTime, username: @ride_request.username }

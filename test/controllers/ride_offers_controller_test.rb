@@ -16,6 +16,11 @@ class RideOffersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should not save empty ride_offer" do
+    ride_test = RideOffer.create
+    assert_not ride_test.save
+  end
+
   test "should create ride_offer" do
     assert_difference('RideOffer.count') do
       post :create, ride_offer: { comments: @ride_offer.comments, destination: @ride_offer.destination, moneyRequested: @ride_offer.moneyRequested, origin: @ride_offer.origin, rideDate: @ride_offer.rideDate, rideTime: @ride_offer.rideTime, username: @ride_offer.username }
